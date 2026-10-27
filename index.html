@@ -202,6 +202,19 @@ button.danger, .danger { background: var(--white); color: var(--bad); border-col
 .nota-d { margin: 0; display: flex; flex-direction: column; } .nota-d div { display: grid; grid-template-columns: 80px 1fr; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--tint); font-size: 13px; } .nota-d dt { color: var(--muted); } .nota-d dd { margin: 0; overflow-wrap: anywhere; }
 .copia { all: unset; cursor: pointer; border-radius: 4px; padding: 1px 4px; margin: -1px -4px; } .copia:hover, .copia:focus-visible { background: var(--tint2); outline: none; } .copia:active { background: var(--sky); }
 .nota-v { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: end; }
+.cob { border-top: 1px solid var(--line); padding-top: 10px; display: flex; flex-direction: column; gap: 8px; } .cob-h { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.cob .tabela.parc td { padding: 4px 6px; font-size: 13px; } .pg-man { margin: 0; font-size: 13px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cob-f { display: flex; flex-direction: column; gap: 8px; } .cob-f .hint { margin: 0; min-height: 1.2em; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; align-self: flex-start; }
+.seg label { display: flex; align-items: center; gap: 6px; padding: 8px 14px; cursor: pointer; font-weight: 600; font-size: 14px; margin: 0; }
+.seg label + label { border-left: 1px solid var(--line); } .seg input { accent-color: var(--navy); margin: 0; } .seg label:has(input:checked) { background: var(--tint2); color: var(--navy); }
+.cob-ok textarea { font-size: 13px; line-height: 1.5; } .cob-ok h2 { margin-top: 0; }
+.sem-pac .sp-l { display: grid; grid-template-columns: 1fr minmax(160px, 240px) auto; gap: 8px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--tint); }
+.sem-pac .sp-l > div { display: flex; flex-direction: column; } .sem-pac .sp-l .muted { font-size: 13px; }
+@media (max-width: 600px) { .sem-pac .sp-l { grid-template-columns: 1fr auto; } .sem-pac .sp-l > div { grid-column: 1 / -1; } }
+.fin-bar .acoes { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; } .cob-painel .acoes { align-items: end; flex-wrap: wrap; } .cob-painel .acoes .hint { flex: 1 1 260px; margin: 0; }
+.cob-novo { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px 12px; margin: 4px 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.cob-novo legend { font-size: 12px; font-weight: 700; color: var(--navy); padding: 0 4px; } .cob-novo .chk { font-weight: 600; }
 .lanc-f { display: grid; grid-template-columns: 120px 150px 1fr 190px 120px auto auto; gap: 8px; align-items: end; } .lanc-f .chk { padding-bottom: 8px; }
 @media (max-width: 1100px) { .lanc-f { grid-template-columns: 1fr 1fr; } .lanc-f .w { grid-column: span 2; } }
 .tabela .num { text-align: right; } .tabela td.neg { color: var(--bad); font-weight: 600; } .tabela td.pos { color: var(--ok); font-weight: 600; }
