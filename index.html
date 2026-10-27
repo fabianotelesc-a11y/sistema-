@@ -437,12 +437,23 @@ h3.fam { margin: 18px 0 8px; font-size: 13px; letter-spacing: .12em; text-transf
 .prod-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } .prod-2 .box { margin-bottom: 0; } .prod-2 { margin-bottom: 16px; }
 @media (max-width: 800px) { .prod-2 { grid-template-columns: 1fr; } .pc-l { grid-template-columns: 100px 1fr 30px; } }
 .prod-pacs { line-height: 1.8; }
+/* Alimentos da equipe */
+.tag-eq { font-style: normal; font-size: 10px; font-weight: 700; letter-spacing: .03em; background: #E4ECF7; color: var(--navy); padding: 1px 6px; border-radius: 8px; margin-left: 4px; white-space: nowrap; }
+.al-form { max-width: 760px; } .al-form .panel { margin-bottom: 12px; } .al-form .seg, .page .filtros .seg { flex-wrap: wrap; } .al-form .seg label, .filtros .seg label { flex-direction: row; }
+.al-num { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 700px) { .al-num { grid-template-columns: repeat(2, minmax(0, 1fr)); } .al-num label:first-child { grid-column: 1 / -1; } .al-form .row3 { grid-template-columns: 1fr; } }
+.al-form label.conf input { background: #FFF6CC; border-color: #E2B93B; }
+.al-ing { display: flex; gap: 8px; align-items: flex-end; padding: 4px 0; } .al-ing .g { width: 90px; flex: none; }
+.al-foto { align-self: flex-start; cursor: pointer; } .al-foto.carregando { opacity: .7; pointer-events: none; }
+.al-prev { background: var(--tint); } .al-l { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; } .al-l span:first-child { min-width: 150px; color: var(--muted); font-size: 13px; }
+.al-falta { color: var(--bad); }
+.al-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 </style>
 </head>
 <body>
 <header class="top">
   <div class="brand"><small>FABIANO TELES</small><b>Sistema</b></div>
-  <nav id="nav" hidden><a href="#/painel" data-r="painel">Painel</a><a href="#/agenda" data-r="agenda">Agenda</a><a href="#/comercial" data-r="comercial">Comercial</a><a href="#/conteudo/quadro" data-r="conteudo">Conteúdo</a><a href="#/pacientes" data-r="pacientes">Pacientes</a><a href="#/bases" data-r="bases">Bases</a><a href="#/financeiro" data-r="financeiro" hidden>Financeiro</a><a href="#/equipe" data-r="equipe">Equipe</a>
+  <nav id="nav" hidden><a href="#/painel" data-r="painel">Painel</a><a href="#/agenda" data-r="agenda">Agenda</a><a href="#/comercial" data-r="comercial">Comercial</a><a href="#/conteudo/quadro" data-r="conteudo">Conteúdo</a><a href="#/pacientes" data-r="pacientes">Pacientes</a><a href="#/bases" data-r="bases">Bases</a><a href="#/alimentos" data-r="alimentos">Alimentos</a><a href="#/financeiro" data-r="financeiro" hidden>Financeiro</a><a href="#/equipe" data-r="equipe">Equipe</a>
     <span class="user"><span id="eu"></span><button data-act="sair">Sair</button></span></nav>
 </header>
 <main id="view"><p class="loading">Carregando…</p></main>
