@@ -216,6 +216,9 @@ button.danger, .danger { background: var(--white); color: var(--bad); border-col
 .fin-bar .acoes { display: flex; flex-wrap: wrap; gap: 8px; align-items: end; } .cob-painel .acoes { align-items: end; flex-wrap: wrap; } .cob-painel .acoes .hint { flex: 1 1 260px; margin: 0; }
 .cob-novo { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px 12px; margin: 4px 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .planos-t input { width: 100%; min-width: 64px; } .planos-t td:first-child input { min-width: 130px; } .planos-t .chk { white-space: nowrap; font-size: 13px; }
+.liq { font-size: 13px; color: var(--ok); font-weight: 600; cursor: help; } .liq-k { font-size: 15px; color: var(--ok); }
+.taxas-g { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; } @media (max-width: 800px) { .taxas-g { grid-template-columns: 1fr 1fr; } }
+.tx-in { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); } .tx-in input { width: 100%; min-width: 0; }
 .cob-novo legend { font-size: 12px; font-weight: 700; color: var(--navy); padding: 0 4px; } .cob-novo .chk { font-weight: 600; }
 .lanc-f { display: grid; grid-template-columns: 120px 150px 1fr 190px 120px auto auto; gap: 8px; align-items: end; } .lanc-f .chk { padding-bottom: 8px; }
 @media (max-width: 1100px) { .lanc-f { grid-template-columns: 1fr 1fr; } .lanc-f .w { grid-column: span 2; } }
