@@ -389,6 +389,10 @@ h3.fam { margin: 18px 0 8px; font-size: 13px; letter-spacing: .12em; text-transf
 .auto-res { background: #E9F4EE; border: 1px solid #BFDCCB; border-radius: 10px; padding: 12px 14px; margin-bottom: 12px; font-size: 13px; } .auto-res.rodando { background: var(--tint); border-color: var(--line); }
 .auto-res ul { margin: 6px 0; padding-left: 18px; } .auto-h { display: flex; justify-content: space-between; } .auto-res details summary { cursor: pointer; font-weight: 600; color: var(--navy2); }
 
+/* anamneses recebidas */
+.an-box { margin-bottom: 16px; } .an-l { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.an-l > div:first-child { display: flex; flex-direction: column; } .an-l small { font-size: 13px; }
+@media (max-width: 600px) { .an-l { grid-template-columns: 1fr auto; } .an-l .an-s { grid-column: 1 / -1; order: 3; } }
 /* hidratação no montador */
 .agua-l { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; } .agua-l input { width: 100%; }
 /* retenção e renovações */
