@@ -96,7 +96,7 @@ button { font: inherit; cursor: pointer; }
 .add-row { display: flex; flex-wrap: wrap; gap: 6px; } .add-row button { background: var(--tint); border: 1px solid var(--line); color: var(--navy); border-radius: 5px; padding: 6px 10px; font-weight: 600; font-size: 13px; }
 .obs { margin-top: 2px; }
 .add-meal { align-self: flex-start; background: var(--navy); color: var(--white); border: none; border-radius: 6px; padding: 10px 16px; font-weight: 600; }
-#toast { position: fixed; left: 50%; bottom: 20px; transform: translate(-50%, 30px); opacity: 0; transition: .2s; background: var(--navy); color: var(--white); padding: 10px 16px; border-radius: 6px; font-weight: 500; max-width: calc(100% - 32px); z-index: 50; }
+#toast { position: fixed; left: 50%; bottom: 20px; transform: translate(-50%, 30px); opacity: 0; transition: .2s; background: var(--navy); color: var(--white); padding: 10px 16px; border-radius: 6px; font-weight: 500; max-width: calc(100% - 32px); z-index: 50; pointer-events: none; }
 #toast.show { opacity: 1; transform: translate(-50%, 0); } #toast.err { background: var(--bad); }
 @media (prefers-reduced-motion: reduce) { #toast { transition: none; } }
 
@@ -151,7 +151,7 @@ button.danger, .danger { background: var(--white); color: var(--bad); border-col
 .sino-i { display: grid; grid-template-columns: 82px 1fr; gap: 2px 10px; padding: 10px 14px; border-bottom: 1px solid var(--tint2); text-decoration: none; color: var(--ink); font-size: 13px; } .sino-i:hover { background: var(--tint); } .sino-i.novo { background: #F2F7FD; } .sino-i.novo .sino-x { font-weight: 600; }
 .sino-i small { grid-column: 2; color: var(--muted); font-size: 11px; } .sino-t { grid-row: span 2; align-self: start; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; border-radius: 4px; padding: 3px 6px; background: var(--tint2); color: var(--navy); text-align: center; }
 .sino-t.t-sumido { background: #FBEBEB; color: var(--bad); } .push-st { margin: 8px 0 0; font-size: 13px; } .push-st.ok { color: var(--ink); } .push-st .btn { margin-left: 6px; }
-.sino-t.t-lead { background: #FBF1D9; color: #7A5A12; } .sino-t.t-app { background: #E3F2EA; color: var(--ok); } .sino-t.t-relatorio { background: #E7F1FB; color: var(--navy2); } .sino-vazio { padding: 18px 14px; color: var(--muted); font-size: 13px; margin: 0; }
+.sino-t.t-prato { background: #EEF3F9; color: #2F5F8F; } .sino-t.t-lead { background: #FBF1D9; color: #7A5A12; } .sino-t.t-app { background: #E3F2EA; color: var(--ok); } .sino-t.t-relatorio { background: #E7F1FB; color: var(--navy2); } .sino-vazio { padding: 18px 14px; color: var(--muted); font-size: 13px; margin: 0; }
 @media (max-width: 800px) { .sino-painel { top: auto; bottom: 0; right: 0; left: 0; width: auto; max-width: none; max-height: 75vh; border-radius: 14px 14px 0 0; } }
 .faixa-filtro { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #FFF8E6; border: 1px solid #E8D29A; border-radius: 8px; padding: 9px 14px; margin: 0 0 12px; font-size: 14px; } .faixa-filtro a { font-weight: 600; color: var(--navy); }
 .kpi { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--navy); border-radius: 8px; padding: 14px; text-decoration: none; color: var(--ink); display: flex; flex-direction: column; }
@@ -501,9 +501,23 @@ h3.fam { margin: 18px 0 8px; font-size: 13px; letter-spacing: .12em; text-transf
 .tl-i { display: flex; gap: 12px; padding: 6px 0 6px 14px; border-left: 2px solid var(--line); position: relative; }
 .tl-i::before { content: ''; position: absolute; left: -6px; top: 11px; width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--navy)); }
 .tl-i .tl-d { font-size: 12px; color: var(--muted); min-width: 40px; padding-top: 1px; } .tl-i div { display: flex; flex-direction: column; gap: 1px; min-width: 0; } .tl-i b { font-size: 14px; color: var(--ink); font-weight: 600; } .tl-i small { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
-.tl-dieta { --c: var(--navy); } .tl-rel { --c: var(--ok); } .tl-cons { --c: #8A5A00; } .tl-corpo { --c: #7A5C2E; } .tl-plano { --c: var(--sky); }
+.tl-reg { --c: #4A7FB5; } .tl-dieta { --c: var(--navy); } .tl-rel { --c: var(--ok); } .tl-cons { --c: #8A5A00; } .tl-corpo { --c: #7A5C2E; } .tl-plano { --c: var(--sky); }
 .tl-f { margin: 0; } .tl-f .chip { cursor: pointer; }
 @media (max-width: 700px) { .hoje-a { width: 100%; padding-left: 36px; } }
+/* ficha → Registro do dia (Fase 2) */
+.reg-sem { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 2px 0 10px; font-size: 13px; }
+.reg-m { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; color: var(--ink); } .reg-m b { color: var(--navy); }
+.reg-m.ok { border-color: var(--ok); } .reg-m.ok b { color: var(--ok); }
+.metas-f { background: var(--bg, #F6F7F9); border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+.metas-g { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px 12px; margin: 8px 0; }
+.metas-g label { font-size: 12px; } .metas-g input { width: 100%; }
+.reg-g { font-size: 12px; } .reg-g th, .reg-g td { text-align: center; padding: 5px 4px; white-space: nowrap; } .reg-g tbody th { text-align: left; font-weight: 600; color: var(--muted); }
+.reg-g th, .reg-g thead th { background: none; } .reg-g thead th { font-weight: 500; color: var(--muted); line-height: 1.15; border-bottom: 1px solid var(--line); } .reg-g thead small { display: block; font-size: 10px; } .reg-g th.hj { color: var(--navy); font-weight: 700; } .reg-g th.ini-sem { border-left: 1px solid var(--line); }
+.reg-g td.ok { color: var(--ok); font-weight: 700; } .reg-g td.vz { color: #C4CAD3; }
+.pratos-g { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-top: 12px; }
+.prato-c { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.prato-img { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 8px; background: var(--line) center / cover no-repeat; font-size: 11px; color: var(--muted); text-decoration: none; text-align: center; padding: 4px; }
+.prato-c figcaption { display: flex; flex-direction: column; font-size: 12px; } .prato-c small { color: var(--muted); overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
