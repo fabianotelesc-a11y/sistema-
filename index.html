@@ -488,6 +488,22 @@ h3.fam { margin: 18px 0 8px; font-size: 13px; letter-spacing: .12em; text-transf
 .al-prev { background: var(--tint); } .al-l { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; } .al-l span:first-child { min-width: 150px; color: var(--muted); font-size: 13px; }
 .al-falta { color: var(--bad); }
 .al-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+/* Hoje, olhe estas pessoas (Painel) */
+.hoje-box { border-left: 4px solid var(--navy); }
+.hoje-l { display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--line); flex-wrap: wrap; } .hoje-l:last-of-type { border-bottom: none; }
+.hoje-l.chamado { opacity: .55; }
+.hoje-n { width: 24px; height: 24px; border-radius: 50%; background: var(--tint2); color: var(--navy); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex: none; }
+.hoje-t { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 200px; } .hoje-t a { color: var(--navy); text-decoration: none; } .hoje-m { font-size: 13px; color: var(--ink); }
+.hoje-a { display: flex; gap: 6px; flex: none; }
+/* Linha do tempo (ficha) */
+.tl { list-style: none; margin: 0; padding: 0 0 0 4px; display: flex; flex-direction: column; }
+.tl-mes { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 10px 0 4px; }
+.tl-i { display: flex; gap: 12px; padding: 6px 0 6px 14px; border-left: 2px solid var(--line); position: relative; }
+.tl-i::before { content: ''; position: absolute; left: -6px; top: 11px; width: 10px; height: 10px; border-radius: 50%; background: var(--c, var(--navy)); }
+.tl-i .tl-d { font-size: 12px; color: var(--muted); min-width: 40px; padding-top: 1px; } .tl-i div { display: flex; flex-direction: column; gap: 1px; min-width: 0; } .tl-i b { font-size: 14px; color: var(--ink); font-weight: 600; } .tl-i small { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.tl-dieta { --c: var(--navy); } .tl-rel { --c: var(--ok); } .tl-cons { --c: #8A5A00; } .tl-corpo { --c: #7A5C2E; } .tl-plano { --c: var(--sky); }
+.tl-f { margin: 0; } .tl-f .chip { cursor: pointer; }
+@media (max-width: 700px) { .hoje-a { width: 100%; padding-left: 36px; } }
 </style>
 </head>
 <body>
