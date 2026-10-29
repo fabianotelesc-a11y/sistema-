@@ -1009,6 +1009,25 @@ label { color: var(--ft-texto-2); }
 .sc-rank tr.fora td { color: var(--muted); } .sc-rank tr.fora td b { font-weight: 400; }
 .sc-sem span { display: inline-block; min-width: 26px; padding: 1px 5px; margin: 0 3px 3px 0; border-radius: 4px; background: var(--tint); border: 1px solid var(--line); font-size: 12px; text-align: center; }
 .sc-como summary { cursor: pointer; } .sc-como p { margin: 10px 0 0; }
+/* Exames (SQL 74) */
+#exames-box .ex-form, #exames-box .ex-editor { display: flex; flex-direction: column; gap: 10px; padding: 12px; background: var(--tint); border-radius: 8px; margin-bottom: 12px; }
+#exames-box .ex-campo { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: var(--navy); }
+#exames-box .ex-campo input, #exames-box .ex-campo select, #exames-box .ex-campo textarea { font: inherit; font-weight: 400; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+#exames-box .inline { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; } #exames-box .flex1 { flex: 1; min-width: 180px; }
+#exames-box .check { display: flex; gap: 8px; align-items: center; font-size: 13px; }
+.ex-pedidos { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.ex-ped, .ex-cab { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ex-ped { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; } .ex-ped small, .ex-cab small { display: block; }
+.ex-card { border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 10px; display: flex; flex-direction: column; gap: 10px; } .ex-card.novo { border-color: #E8C77A; background: #FFFCF4; }
+.ex-arqs { display: flex; gap: 6px; flex-wrap: wrap; }
+.ex-t tr.ex-alto td, .ex-t tr.ex-baixo td { background: #FFF6E5; } .ex-f { color: #8A5A00; font-weight: 700; white-space: nowrap; }
+.ex-evo-t td.ex-alto, .ex-evo-t td.ex-baixo { color: #8A5A00; font-weight: 700; } .ex-evo-t td.vz { color: var(--muted); } .ex-evo-t th small { font-weight: 400; }
+.ex-evo summary { cursor: pointer; font-weight: 700; color: var(--navy); margin: 6px 0; }
+.ex-pts { background: var(--tint); border-radius: 8px; padding: 10px 12px; font-size: 13px; } .ex-pts ul { margin: 6px 0 0; padding-left: 18px; }
+.ex-ed td:first-child { min-width: 190px; } .ex-ed td:nth-child(5) { min-width: 96px; } .ex-ed td:nth-child(4) { min-width: 140px; }
+.ex-evo-t tbody th { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 600; color: var(--navy); text-align: left; }
+.ex-ed input, .ex-ed select { width: 100%; min-width: 60px; font: inherit; font-size: 13px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; }
+.ex-ed tr.ex-conf td { background: #FFF3C4; } .ex-aviso { margin: 0; padding: 8px 10px; background: #FFF3C4; border-radius: 6px; font-size: 13px; }
 </style>
 </head>
 <body>
