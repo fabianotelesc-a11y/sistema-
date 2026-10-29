@@ -959,6 +959,22 @@ label { color: var(--ft-texto-2); }
 .lead details summary { color: var(--ft-azul); }
 .lead-k.sel { outline: 0; border-color: var(--ft-azul); box-shadow: inset 0 0 0 1px var(--ft-azul); }
 .lead-k u { color: var(--ft-erro); }
+/* FT Score (Fase 3): ficha e tela do ranking */
+.reg-score { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: end; padding: 10px 0 14px; margin-bottom: 10px; border-bottom: 1px solid var(--line); }
+.reg-score .rs-n { display: flex; flex-direction: column; } .reg-score .rs-n b { font-size: 34px; font-weight: 300; line-height: 1; color: var(--navy); } .reg-score .rs-n small { font-size: 12px; color: var(--muted); }
+.rs-barras { display: flex; align-items: flex-end; gap: 4px; height: 58px; } .rs-barras span { flex: 1; max-width: 26px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 2px; }
+.rs-barras i { display: block; width: 100%; height: var(--h); background: var(--navy); border-radius: 3px 3px 0 0; } .rs-barras span.atual i { background: var(--sky, #AFC1D6); } .rs-barras small { font-size: 9px; color: var(--muted); }
+.reg-score .rs-partes { grid-column: 1 / -1; margin: 0; font-size: 12px; color: var(--muted); } .reg-score .rs-partes b { color: var(--ink); font-weight: 600; }
+.reg-score .link { grid-column: 1 / -1; justify-self: start; font-size: 13px; }
+.scorepg .sc-meses { margin: 0 0 14px; } .scorepg .ft-card { margin-bottom: 16px; }
+.score-g-h { display: flex; align-items: flex-start; gap: 14px; } .score-g-h > div { flex: 1; min-width: 0; } .score-g-h > .ft-ico { width: 30px; height: 30px; color: var(--navy); flex: none; }
+.score-g .ft-campo { margin: 12px 0 10px; max-width: 460px; }
+.sc-nome { margin: 4px 0 2px; font-size: 22px; font-weight: 400; line-height: 1.2; color: var(--navy); } .sc-nome a { color: inherit; text-decoration: none; } .sc-nome a:hover { text-decoration: underline; }
+.score-g-h { flex-wrap: wrap; }
+@media (max-width: 640px) { .ft-tabela.cartoes td.sc-sem { justify-content: flex-end; flex-wrap: wrap; gap: 4px; } .sc-sem span { margin: 0; } .score-g-h .ft-badge { order: 3; } } .score-g.vazio p { margin: 4px 0 0; }
+.sc-rank tr.fora td { color: var(--muted); } .sc-rank tr.fora td b { font-weight: 400; }
+.sc-sem span { display: inline-block; min-width: 26px; padding: 1px 5px; margin: 0 3px 3px 0; border-radius: 4px; background: var(--tint); border: 1px solid var(--line); font-size: 12px; text-align: center; }
+.sc-como summary { cursor: pointer; } .sc-como p { margin: 10px 0 0; }
 </style>
 </head>
 <body>
@@ -967,7 +983,7 @@ label { color: var(--ft-texto-2); }
   <nav id="nav" hidden aria-label="Menu">
     <a href="#/painel" data-r="painel" title="Painel"><span class="rot">Painel</span></a><a href="#/pacientes" data-r="pacientes" title="Pacientes"><span class="rot">Pacientes</span></a><a href="#/agenda" data-r="agenda" title="Agenda"><span class="rot">Agenda</span></a>
     <a href="#/comercial" data-r="comercial" class="nv-g" title="Comercial"><span class="rot">Comercial</span></a><a href="#/conteudo/quadro" data-r="conteudo" title="Conteúdo"><span class="rot">Conteúdo</span></a>
-    <a href="#/bases" data-r="bases" class="nv-g" title="Bases"><span class="rot">Bases</span></a><a href="#/alimentos" data-r="alimentos" title="Alimentos"><span class="rot">Alimentos</span></a>
+    <a href="#/bases" data-r="bases" class="nv-g" title="Bases"><span class="rot">Bases</span></a><a href="#/alimentos" data-r="alimentos" title="Alimentos"><span class="rot">Alimentos</span></a><a href="#/score" data-r="score" title="FT Score"><span class="rot">FT Score</span></a>
     <a href="#/equipe" data-r="equipe" class="nv-g" title="Equipe"><span class="rot">Equipe</span></a><a href="#/financeiro" data-r="financeiro" hidden title="Financeiro"><span class="rot">Financeiro</span></a><a href="#/config" data-r="config" title="Configurações"><span class="rot">Configurações</span></a>
     <button type="button" id="nav-mais" class="nav-mais" aria-expanded="false" hidden><span class="rot">Mais</span></button>
     <span class="user"><span id="eu"></span><button data-act="sair" title="Sair"><span class="rot">Sair</span></button></span></nav>
