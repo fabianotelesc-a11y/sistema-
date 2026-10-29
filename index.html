@@ -878,6 +878,14 @@ label { color: var(--ft-texto-2); }
 #mont .tools .danger:hover { background: var(--ft-erro-fundo); border-color: transparent; }
 #mont .opt { border-top-color: var(--ft-linha-suave); }
 #mont .opt-h h3 { font-size: 14px; font-weight: 600; color: var(--ft-texto); }
+#mont .opt-rec { margin: 8px 0; padding: 10px 12px; border: 1px solid var(--ft-borda, #D7D7D7); border-left: 3px solid #091C2D; border-radius: 8px; background: #F7F7F7; display: flex; flex-direction: column; gap: 8px; }
+#mont .opt-rec-h { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; font-size: 13px; }
+#mont .opt-rec label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; } #mont .opt-rec textarea, #mont .opt-rec input { width: 100%; }
+#mont .rec-pick { margin: 8px 0 12px; padding: 12px; border: 1px solid var(--ft-borda, #D7D7D7); border-radius: 10px; background: #fff; }
+#mont .rec-pick-h { display: flex; gap: 8px; } #mont .rec-pick-h input { flex: 1; }
+#mont .rec-pick-l { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 6px; max-height: 320px; overflow: auto; }
+#mont .rec-pick-l button { text-align: left; display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border: 1px solid #E9E9E9; border-radius: 8px; background: #fff; cursor: pointer; }
+#mont .rec-pick-l button:hover { border-color: #091C2D; } #mont .rec-pick-l small { color: #6B6B6B; font-size: 12px; } #mont .rec-pick-l em.cabe { color: #1D6B3A; font-style: normal; font-weight: 600; }
 #mont .item { border-color: var(--ft-linha-suave); border-radius: var(--ft-r-campo); }
 #mont .item.sub { border-left: 2px solid var(--ft-azul); }
 #mont .add-meal { border-radius: var(--ft-r-campo); background: var(--ft-azul); }
