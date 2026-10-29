@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FT Equipe · Sistema Fabiano Teles</title>
 <meta name="robots" content="noindex">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://mhanleqbnlmuhmzqicqj.supabase.co https://storage.tally.so; media-src 'self' blob: https://mhanleqbnlmuhmzqicqj.supabase.co; connect-src 'self' https://mhanleqbnlmuhmzqicqj.supabase.co wss://mhanleqbnlmuhmzqicqj.supabase.co https://viacep.com.br; frame-src 'self' blob: https://mhanleqbnlmuhmzqicqj.supabase.co; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://mhanleqbnlmuhmzqicqj.supabase.co https://storage.tally.so https://i.ytimg.com; media-src 'self' blob: https://mhanleqbnlmuhmzqicqj.supabase.co; connect-src 'self' https://mhanleqbnlmuhmzqicqj.supabase.co wss://mhanleqbnlmuhmzqicqj.supabase.co https://viacep.com.br; frame-src 'self' blob: https://mhanleqbnlmuhmzqicqj.supabase.co https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="application-name" content="FT Equipe">
 <meta name="apple-mobile-web-app-title" content="FT Equipe">
@@ -558,6 +558,11 @@ h3.fam { margin: 18px 0 8px; font-size: 13px; letter-spacing: .12em; text-transf
 .rc-chip { display: inline-flex; flex-direction: row !important; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 16px; padding: 5px 12px; background: var(--white); cursor: pointer; font-size: 14px; }
 .rc-chip input { position: absolute; opacity: 0; width: 0; height: 0; } .rc-chip.on { background: var(--navy); border-color: var(--navy); color: #fff; }
 .rc-chips #rc-tag-nova { width: 190px; }
+.au-video { position: relative; width: 100%; max-width: 560px; aspect-ratio: 16 / 9; margin-top: 8px; border-radius: 10px; overflow: hidden; background: #000; } .au-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.au-capa { width: 112px !important; height: 63px !important; }
+.met-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 12px 0; } .met-kpis .kpi { display: flex; flex-direction: column; gap: 2px; padding: 14px; background: #fff; border: 1px solid var(--ft-linha-suave, #E9E9E9); border-radius: 10px; } .met-kpis .kpi b { font-size: 24px; font-weight: 500; color: var(--ft-azul, #091C2D); } .met-kpis .kpi small { color: var(--ft-texto-2, #5C5C5C); font-size: 12px; }
+.met .box { margin-bottom: 14px; } .met .filtros { display: flex; flex-wrap: wrap; gap: 8px; } .met .filtros select { width: auto; flex: 1 1 200px; }
+.met .cart-l li:not(:has(a)) { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: baseline; padding: 6px 0; } .met .cart-l li:not(:has(a)) .cart-b { grid-column: 1 / -1; } .met-h3 { margin: 16px 0 8px; font-size: 15px; } .met .filtros select { min-width: 180px; } .badge.ok { background: #E5F4E4; color: #1D6B3A; }
 .rc-ing { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; padding: 8px 0; border-bottom: 1px solid var(--tint); } .rc-ing .search { flex: 2 1 260px; } .rc-ing > label { flex: 1 1 140px; } .rc-ing .g { width: 100px; flex: none; }
 .rc-ing .chk { flex: none; flex-direction: row; align-items: center; gap: 4px; padding-bottom: 8px; } .rc-ing .x { flex: none; }
 .rc-alt { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; } .rc-alt .search { flex: 1 1 220px; max-width: 320px; }
@@ -1012,13 +1017,13 @@ label { color: var(--ft-texto-2); }
   <nav id="nav" hidden aria-label="Menu">
     <a href="#/painel" data-r="painel" title="Painel"><span class="rot">Painel</span></a><a href="#/pacientes" data-r="pacientes" title="Pacientes"><span class="rot">Pacientes</span></a><a href="#/agenda" data-r="agenda" title="Agenda"><span class="rot">Agenda</span></a>
     <a href="#/comercial" data-r="comercial" class="nv-g" title="Comercial"><span class="rot">Comercial</span></a><a href="#/conteudo/quadro" data-r="conteudo" title="Conteúdo"><span class="rot">Conteúdo</span></a>
-    <a href="#/bases" data-r="bases" class="nv-g" title="Bases"><span class="rot">Bases</span></a><a href="#/alimentos" data-r="alimentos" title="Alimentos"><span class="rot">Alimentos</span></a><a href="#/receitas" data-r="receitas" title="Receitas"><span class="rot">Receitas</span></a><a href="#/score" data-r="score" title="FT Score"><span class="rot">FT Score</span></a>
+    <a href="#/bases" data-r="bases" class="nv-g" title="Bases"><span class="rot">Bases</span></a><a href="#/alimentos" data-r="alimentos" title="Alimentos"><span class="rot">Alimentos</span></a><a href="#/receitas" data-r="receitas" title="Receitas"><span class="rot">Receitas</span></a><a href="#/aulas" data-r="aulas" title="Aulas"><span class="rot">Aulas</span></a><a href="#/metodologia" data-r="metodologia" hidden title="Metodologia"><span class="rot">Metodologia</span></a><a href="#/score" data-r="score" title="FT Score"><span class="rot">FT Score</span></a>
     <a href="#/equipe" data-r="equipe" class="nv-g" title="Equipe"><span class="rot">Equipe</span></a><a href="#/financeiro" data-r="financeiro" hidden title="Financeiro"><span class="rot">Financeiro</span></a><a href="#/config" data-r="config" title="Configurações"><span class="rot">Configurações</span></a>
     <button type="button" id="nav-mais" class="nav-mais" aria-expanded="false" hidden><span class="rot">Mais</span></button>
     <span class="user"><span id="eu"></span><button data-act="sair" title="Sair"><span class="rot">Sair</span></button></span></nav>
 </header>
 <main id="view"><p class="loading">Carregando…</p></main>
 <div id="toast" role="status" aria-live="polite"></div>
-<script src="boot.js?v=84956920"></script>
+<script src="boot.js?v=e442fc1f"></script>
 </body>
 </html>
