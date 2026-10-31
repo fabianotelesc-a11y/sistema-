@@ -857,6 +857,13 @@ label { color: var(--ft-texto-2); }
 @media (max-width: 760px) {
   #mont .mont-acoes { margin-left: 0; width: 100%; } #mont .mont-acoes #estrategia { width: 100%; flex: 1 1 100%; }
   #mont .mont-acoes .ft-btn.primario { flex: 1; }
+  /* barra recolhida ao rolar: só Ficha · nome · Salvar numa linha (toque no nome ou rolar ao topo abre) */
+  #mont.compacta .mont-bar { flex-wrap: nowrap; padding: 8px 0; gap: 8px; }
+  #mont.compacta .mont-bar .mont-tit { flex: 1; min-width: 0; } #mont.compacta .mont-tit small { display: none; }
+  #mont.compacta .mont-tit b { font-size: 16px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #mont.compacta .mont-acoes { width: auto; flex: 0 0 auto; }
+  #mont.compacta .mont-acoes #estrategia, #mont.compacta .mont-acoes [data-act=an-toggle], #mont.compacta .mont-acoes .ft-menu { display: none; }
+  #mont.compacta .mont-acoes .ft-btn.primario { flex: 0 0 auto; padding: 8px 14px; }
 }
 /* coluna lateral: cartões discretos; só o total fica no azul (é o número que importa) */
 #mont .panel { border-color: var(--ft-linha-suave); border-radius: var(--ft-r-card); padding: 16px; gap: 10px; }
