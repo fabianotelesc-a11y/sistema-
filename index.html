@@ -883,6 +883,44 @@ label { color: var(--ft-texto-2); }
 #mont .tools .danger:hover { background: var(--ft-erro-fundo); border-color: transparent; }
 #mont .opt { border-top-color: var(--ft-linha-suave); }
 #mont .opt-h h3 { font-size: 14px; font-weight: 600; color: var(--ft-texto); }
+/* Cor por tipo de refeição (variáveis --rc/--rct/--rcf vêm do style do .meal, lib/cores_refeicao.js). O cabeçalho continua branco: a cor entra pela borda, pela pastilha e pela faixa das alternativas. */
+#mont .meal { --rc: #939393; --rct: #5E5E5E; --rcf: #F0F0F0; overflow: clip; border-left: 6px solid var(--rc); scroll-margin-top: calc(var(--topo) + var(--mbh, 76px) + 8px); transition: box-shadow .3s; }
+#mont .meal.foco { box-shadow: 0 0 0 3px var(--rcf), 0 0 0 5px var(--rc); }
+#mont .meal-h { position: sticky; top: calc(var(--topo) + var(--mbh, 76px)); z-index: 5; background: var(--ft-superficie); box-shadow: 0 1px 0 var(--ft-linha-suave); }
+#mont .meal-fixo { display: none; } /* no celular: tira fina fixa com a pastilha e o nome, no lugar do cabeçalho inteiro */
+#mont .meal-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 999px; background: var(--rc); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+#mont .meal-h .m-tit { flex: 1 1 180px; font-weight: 700; font-size: 16px; color: var(--rct); }
+#mont .meal-h .m-nome { width: 112px; font-weight: 500; font-size: 12px; color: var(--ft-texto-3); }
+#mont .opt { border-left: 3px solid var(--rc); margin-left: 10px; margin-right: 10px; margin-bottom: 10px; border-top: 0; border-radius: 0 var(--ft-r-campo) var(--ft-r-campo) 0; background: var(--white); }
+#mont .opt.principal { border-left-width: 3px; background: var(--rcf); }
+#mont .opt.principal .opt-h h3 { color: var(--rct); }
+#mont .opt-h h3 { display: inline-flex; align-items: center; gap: 6px; }
+#mont .opt-h h3::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--rc); }
+#mont .opt.principal .opt-h h3::before { width: 10px; height: 10px; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--rc); }
+#mont .opt-h .sm { background: none; border: 1px solid var(--ft-linha); color: var(--ft-texto-2); border-radius: var(--ft-r-campo); padding: 4px 9px; font-size: 12px; }
+#mont .opt-h .sm:hover { border-color: var(--rc); color: var(--rct); }
+#mont .opt.fechada { padding: 8px 14px; opacity: .92; }
+#mont .opt.fechada .opt-h { gap: 8px 12px; } #mont .opt.fechada .opt-h .sm { margin-left: auto; }
+#mont .opt-resumo { font-size: 12px; color: var(--ft-texto-3); flex: 1 1 200px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#mont .opt.nova { animation: opt-nova 1.4s ease-out; } @keyframes opt-nova { 0% { box-shadow: 0 0 0 3px var(--rc); } 100% { box-shadow: 0 0 0 0 transparent; } }
+#mont .dif.meio { background: #FBF0D9; color: #7A5200; }
+#mont .opt-add-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 2px 10px 12px 10px; }
+#mont .opt-add { background: #fff; border: 1px dashed var(--rc); color: var(--rct); font-weight: 600; border-radius: var(--ft-r-campo); padding: 8px 14px; }
+#mont .opt-add:hover { background: var(--rcf); }
+#mont .opt-add-row small { color: var(--ft-texto-3); font-size: 12px; }
+#mont .ref-nav { display: flex; gap: 8px; flex-wrap: wrap; padding: 2px 0; margin: -6px 0 -4px; }
+#mont .ref-chip { --rc: #939393; --rct: #5E5E5E; --rcf: #F0F0F0; display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 6px 12px 6px 10px; border: 1px solid var(--rc); border-left-width: 5px; border-radius: var(--ft-r-campo); background: #fff; color: var(--rct); text-align: left; line-height: 1.2; }
+#mont .ref-chip:hover { background: var(--rcf); } #mont .ref-chip b { font-size: 13px; font-weight: 700; } #mont .ref-chip small { font-size: 11px; color: var(--ft-texto-3); }
+@media (max-width: 760px) {
+  #mont .meal-h { position: static; box-shadow: none; }
+  #mont .meal-fixo { display: flex; align-items: center; gap: 10px; position: sticky; top: calc(var(--topo) + var(--mbh, 76px)); z-index: 5; padding: 6px 12px; background: var(--rcf); color: var(--rct); font-size: 14px; border-bottom: 1px solid var(--ft-linha-suave); }
+  #mont .meal-fixo b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+@media (max-width: 900px) {
+  #mont .ref-nav { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-left: -4px; padding-left: 4px; }
+  #mont .ref-chip { flex: 0 0 auto; }
+  #mont .meal-h .m-nome { width: 90px; }
+}
 #mont .opt-rec { margin: 8px 0; padding: 10px 12px; border: 1px solid var(--ft-borda, #D7D7D7); border-left: 3px solid #091C2D; border-radius: 8px; background: #F7F7F7; display: flex; flex-direction: column; gap: 8px; }
 #mont .opt-rec-h { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; font-size: 13px; }
 #mont .opt-rec label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; } #mont .opt-rec textarea, #mont .opt-rec input { width: 100%; }
